@@ -1,0 +1,55 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a1097e11-e44e-4d7b-8ae5-ab4218aec16a</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <CompactSitecoreItemsInProjectFile>True</CompactSitecoreItemsInProjectFile>
+    <AssemblyName>Sc.MultiTreeList.Tds.Core</AssemblyName>
+    <Name>Sc.MultiTreeList.Tds.Core</Name>
+    <RootNamespace>Sc.MultiTreeList.Tds.Core</RootNamespace>
+    <SerializationFormat>YML</SerializationFormat>
+    <ManageRoles>False</ManageRoles>
+    <SitecoreDatabase>core</SitecoreDatabase>
+    <AssemblyStatus>Exclude</AssemblyStatus>
+    <SourceWebVirtualPath>/Sc.MultiTreeList.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{e786591d-b28e-4ce0-9fa8-980241b82e59}|Sc.MultiTreeList\Sc.MultiTreeList.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\Sc.MultiTreeList</SourceWebPhysicalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\system.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\MultiTreeList.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\MultiTreeList\Treelist with Multiple Roots.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>AlwaysUpdate</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\MultiTreeList\TreelistEx with Multiple Roots.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>AlwaysUpdate</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\MultiTreeList\TreelistEx with Multiple Roots\Menu.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>AlwaysUpdate</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\MultiTreeList\TreelistEx with Multiple Roots\Menu\Edit.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>AlwaysUpdate</ItemDeployment></SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sc.MultiTreeList\Sc.MultiTreeList.csproj">
+      <Project>{e786591d-b28e-4ce0-9fa8-980241b82e59}</Project>
+      <Name>Sc.MultiTreeList</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

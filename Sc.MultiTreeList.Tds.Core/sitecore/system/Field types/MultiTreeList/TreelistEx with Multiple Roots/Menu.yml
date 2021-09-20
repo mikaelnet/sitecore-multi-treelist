@@ -1,0 +1,38 @@
+---
+ID: "97d8a75f-75e1-419c-a088-ecf0bde87a31"
+Parent: "e6dd774d-279a-42a1-b040-46d56946def2"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Field types/MultiTreeList/TreelistEx with Multiple Roots/Menu
+DB: core
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: tree list
+  Value: |
+    {09B0EB6B-B6B6-4E40-8804-137A4CC14074}
+    {52DECC09-A36C-465A-B532-4186ADA9C731}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20071211T093638
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6c266c07-b4fa-490d-90ee-143cdad3cdee"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210310T090700Z
