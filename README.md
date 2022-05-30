@@ -27,6 +27,11 @@ In addition, it also support four main types of datasources:
 * `query:` (note that for obvious reasons having a | character is not supported within a query)
 * `code:` (must implement `Sitecore.Buckets.FieldTypes.IDataSource`)
 
+Content is stored in the same raw format as TreeList/TreeListEx, so no changes is needed reading
+the content of the fields. This also means that, if for whatever reason, this module can't be used 
+in future versions of Sitecore, the field types can always be changed back to TreeList/TreeListEx
+without loosing data - just content editor convenience.
+
 ### ContentSearch/Solr
 Since this is a new field type, it also needs to be recognized by Sitecore ContentSearch so
 that it'll be indexed properly in Solr. 
